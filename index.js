@@ -2,7 +2,7 @@
 const fetch = require('node-fetch')
 const FormData = require('form-data')
 
-const request = require('request');
+
 // API_URL
 const LIKIE_URL = 'https://tieba.baidu.com/mo/q/newmoindex'
 const TBS_URL = 'http://tieba.baidu.com/dc/common/tbs'
