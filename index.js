@@ -117,22 +117,7 @@ let sign = function (bduss, tbs, fid, kw) {
   })
 }
 
-function send(){
- new Promise(() => {
-    setTimeout(() => {
-      console.info('开始签到贴吧：')
-      fetch("http://baidu.com", {
-        method: 'GET',
-        headers: headerInfo,
-      }).catch((e) => {}).then((r) => {
-          
-         console.log(r)
-        })
-    }, 5000)
-  })
 
-}
-send()
 function run(bduss) {
   Promise.all([get_tbs(bduss), get_favorite(bduss)]).then(async (res) => {
     let tbs = res[0],
