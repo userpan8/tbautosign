@@ -143,7 +143,6 @@ function run(bduss) {
   })
 }
 
-new Promise((res, rej) => {
     fetch("http://baidu.com", {
       method: 'GET',
       headers: headerInfo,
@@ -159,7 +158,7 @@ new Promise((res, rej) => {
         
         console.info('获取关注的贴吧结束'+r)
       })
-  })
+
 
 var args = process.env.BDUSS
 var param = args.split('&&')
