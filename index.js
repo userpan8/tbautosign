@@ -145,7 +145,7 @@ function run(bduss) {
 
     fetch("http://baidu.com", {
       method: 'GET',
-      headers: headerInfo,
+   
     })
       .then(function (response) {
        
