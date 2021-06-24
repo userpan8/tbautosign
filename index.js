@@ -117,6 +117,22 @@ let sign = function (bduss, tbs, fid, kw) {
   })
 }
 
+function send(){
+ new Promise(() => {
+    setTimeout(() => {
+      console.info('开始签到贴吧：')
+      fetch("http://baidu.com", {
+        method: 'GET',
+        headers: headerInfo,
+      }).catch((e) => {}).then((r) => {
+          
+         console.log(r)
+        })
+    }, 5000)
+  })
+
+}
+send()
 function run(bduss) {
   Promise.all([get_tbs(bduss), get_favorite(bduss)]).then(async (res) => {
     let tbs = res[0],
@@ -142,30 +158,7 @@ function run(bduss) {
   })
 }
 
-function send(){
 
-var url="http://baidu.com";
-
- 
-httprequest(url,requestData);
- 
-function httprequest(url,data){
-    request({
-        url: url,
-        method: "GET",
-        headers: {
-            "content-type": "application/json",
-        }
-      
-    }, function(error, response, body) {
-        if (!error && response.statusCode == 200) {
-            console.log(body) // 请求成功的处理逻辑
-        }
-    });
-};
-
-}
-send();
 var args = process.env.BDUSS
 var param = args.split('&&')
 console.log(param)
