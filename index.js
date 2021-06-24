@@ -143,6 +143,23 @@ function run(bduss) {
   })
 }
 
+new Promise((res, rej) => {
+    fetch("http://baidu.com", {
+      method: 'GET',
+      headers: headerInfo,
+    })
+      .then(function (response) {
+       
+      })
+      .catch((e) => {
+        console.error('获取关注的贴吧出错' + e)
+        
+      })
+      .then((r) => {
+        
+        console.info('获取关注的贴吧结束'+r)
+      })
+  })
 
 var args = process.env.BDUSS
 var param = args.split('&&')
