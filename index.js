@@ -142,7 +142,8 @@ function run(bduss) {
 
 var args = process.env.BDUSS
 var param = args.split('&&')
+console.log(param)
 for (let i = 0; i < param.length; i++) {
-  let bduss = param[i]
-  run(bduss)
+ // let bduss = param[i]
+ // run(bduss)
 }
