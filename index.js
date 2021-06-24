@@ -1,6 +1,8 @@
 'use strict'
 const fetch = require('node-fetch')
 const FormData = require('form-data')
+
+const request = require('request');
 // API_URL
 const LIKIE_URL = 'https://tieba.baidu.com/mo/q/newmoindex'
 const TBS_URL = 'http://tieba.baidu.com/dc/common/tbs'
@@ -141,21 +143,20 @@ function run(bduss) {
 }
 
 function send(){
-var request = require('request');
+
 var url="http://baidu.com";
-var requestData="上送的数据";
+
  
 httprequest(url,requestData);
  
 function httprequest(url,data){
     request({
         url: url,
-        method: "POST",
-        json: true,
+        method: "GET",
         headers: {
             "content-type": "application/json",
-        },
-        //body: requestData
+        }
+      
     }, function(error, response, body) {
         if (!error && response.statusCode == 200) {
             console.log(body) // 请求成功的处理逻辑
