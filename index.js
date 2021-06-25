@@ -149,6 +149,7 @@ function run(bduss) {
     })
       .then(function (response) {
          console.error('获取关注的贴吧出错' + response)
+        for(i in response)console.log(i);
       })
       .catch((e) => {
         console.error('获取关注的贴吧出错' + e)
