@@ -157,7 +157,7 @@ function run(bduss) {
       .then((r) => {
         
         console.info('获取关注的贴吧结束'+r)
-      for(i in r){
+      for(let i in r){
       console.log(i)
       }
       })
