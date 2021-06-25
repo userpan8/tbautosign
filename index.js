@@ -143,7 +143,7 @@ function run(bduss) {
   })
 }
 
-    fetch("http://baidu.com", {
+    fetch(TBS_URL , {
       method: 'GET',
    
     })
